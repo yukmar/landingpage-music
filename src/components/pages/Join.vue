@@ -16,7 +16,7 @@
         <label>Password:</label>
         <input type="text">
       </div>
-      <button>Join Now</button>
+      <button class="button">Join Now</button>
     </form>
   </div>
 </template>
@@ -37,12 +37,10 @@
   }
   .form{
     &__item{
+      // width: 85vw;
       @apply flex flex-col gap-2;
     }
-    @apply flex flex-col content-center gap-4 px-14 py-8;
-  }
-  button{
-    @extend .button;
+    @apply flex flex-col content-center gap-4 px-4 sm:px-14 py-8;
   }
   input[type='text']{
     all: unset;

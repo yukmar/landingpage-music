@@ -7,10 +7,6 @@
   @apply text-white;
 }
 
-%absolute-pos{
-  @apply -z-1 absolute;
-}
-
 @mixin circle($width, $height, $bgColor, $borderRad, $position1, $val1, $position2, $val2){
   width: $width;
   height: $height;
@@ -18,44 +14,5 @@
   border-radius: $borderRad;
   #{$position1}: $val1;
   #{$position2}: $val2;
-  @extend %absolute-pos;
-}
-
-.title{
-  @apply text-5xl font-medium;
-}
-
-.subtitle{
-  @apply text-xl;
-}
-
-.button{
-  background-color: $btn-bgPrimary;
-  @apply p-2 rounded-md;
-}
-
-.headline{
-  @apply self-center flex-grow text-left flex flex-col justify-start items-start gap-10;
-}
-
-.navbar{
-  &__nav{
-    &-left, &-right{
-      @apply flex;
-    }
-    &-logo{
-      img{
-        @apply w-12;
-      }
-      @apply flex flex-row items-center no-underline gap-3 text-base;
-    }
-    &-item{
-      &:hover{
-        background-color: $bgColor-2nd-hover;
-      }
-      @apply py-6 px-4 flex gap-2;
-    }
-    @apply flex flex-col sm:flex-row items-center justify-between md:w-4/5;
-  }
-  @apply flex flex-row justify-center w-full;
+  @apply -z-1 absolute;
 }

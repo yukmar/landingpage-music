@@ -22,8 +22,7 @@
 </script>
 <style lang="scss" scoped>
   .main{
-    width: 80%;
-    @apply text-white flex flex-col content-between sm:flex-row sm:justify-between flex-grow;
+    @apply text-white flex flex-col sm:flex-row justify-around flex-grow py-4 sm:p-0 w-4/5;
   }
 
   #circle-1{
