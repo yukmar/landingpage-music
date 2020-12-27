@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: $bgColor;
+  @apply m-0 p-0 min-h-screen min-w-full overflow-hidden;
+}
+
+#app {
+  @apply h-screen w-full flex flex-col items-center;
+}
