@@ -4,8 +4,8 @@
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import Content from './components/Content.vue';
+import Header from './components/mobile/Header.vue';
+import Content from './components/mobile/Content.vue';
 
 export default {
   name: 'App',

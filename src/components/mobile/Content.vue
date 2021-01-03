@@ -1,30 +1,19 @@
 <template>
-  <div class="main">
-    <slot></slot>
-  </div>
-  <Footer v-if="checkPathHome"/>
+  <router-view></router-view>
+  <Footer />
   <div id="circle-1"></div>
   <div id="circle-2"></div>
   <div id="circle-3"></div>
 </template>
 <script>
   import Footer from './Footer.vue';
-  export default{
+  export default {
     components: {
       Footer
-    },
-    computed: {
-      checkPathHome(){
-        return this.$route.name !== 'home';
-      }
     }
   }
 </script>
 <style lang="scss" scoped>
-  .main{
-    @apply text-white flex flex-row sm:flex-row justify-around flex-grow py-4 sm:p-0 w-4/5;
-  }
-
   #circle-1{
     @include circle(16em, 16em, #3c313f, 50%, bottom, 3em, left, 6em);
   }
