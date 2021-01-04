@@ -50,7 +50,7 @@
 </template>
 <style lang="scss" scoped>
 .mob-main{
-  @apply flex flex-col flex-grow
+  @apply flex flex-grow flex-col
     items-center justify-center;
 }
 

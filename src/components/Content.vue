@@ -1,28 +1,27 @@
 <template>
-  <div class="main">
+  <div class="main" :style="adjustLayout">
     <slot></slot>
   </div>
-  <Footer v-if="checkPathHome"/>
   <div id="circle-1"></div>
   <div id="circle-2"></div>
   <div id="circle-3"></div>
 </template>
 <script>
-  import Footer from './Footer.vue';
   export default{
-    components: {
-      Footer
-    },
-    computed: {
-      checkPathHome(){
-        return this.$route.name !== 'home';
-      }
+    props: {
+      adjustLayout: Object
     }
   }
 </script>
 <style lang="scss" scoped>
   .main{
-    @apply text-white flex flex-row sm:flex-row justify-around flex-grow py-4 sm:p-0 w-4/5;
+    @apply flex flex-grow;
+    @screen sm{
+      @apply flex-row
+      justify-around 
+      p-0 w-4/5
+      text-white;
+    }
   }
 
   #circle-1{

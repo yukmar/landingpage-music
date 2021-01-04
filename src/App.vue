@@ -1,17 +1,23 @@
 <template>
   <Header />
-  <Content />
+  <router-view></router-view>
+  <Footer v-if="checkPathHome" />
 </template>
 
 <script>
-import Header from './components/mobile/Header.vue';
-import Content from './components/mobile/Content.vue';
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Content
+    Footer
+  },
+  computed: {
+    checkPathHome(){
+      return this.$route.name !== 'home';
+    }
   }
 }
 </script>

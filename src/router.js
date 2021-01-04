@@ -17,17 +17,17 @@ const routes = [
   {
     path: '',
     name: 'home',
-    component: MobHome
+    component: Home
   },
   {
     path: '/discover',
     name: 'discover',
-    component: MobDiscover
+    component: Discover
   },
   {
     path: '/join',
     name: 'join',
-    component: MobJoin
+    component: Join
   }
 ];
 
