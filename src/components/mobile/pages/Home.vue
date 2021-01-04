@@ -12,38 +12,51 @@
 </template>
 <style lang="scss" scoped>
 .mob-main{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    // flex-grow: 1;
+    // display: flex;
+    // flex-direction: column;
     
-    justify-content: space-between;
-    height: 100%;
+    // justify-content: space-between;
+    // height: 100%;
+
+    @apply flex flex-col flex-grow
+    justify-between h-full;
   }
 
 div:first-child{
-  order: 2;
-  width: 100%;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
+
+  // order: 2;
+  // width: 100%;
   img{
-    width: 50%;
+    // width: 50%;
+    @apply w-2/4;
   }
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  @apply flex flex-row justify-center
+  order-2 w-full;
 }
 div:last-child{
-  order: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  line-height: 1rem;
+  // order: 1;
+  // display: flex;
+  // flex-direction: column;
+  // gap: 1rem;
+  // line-height: 1rem;
+  // margin-top: 3rem;
+  // margin-left: 3rem;
   padding-right: 20px;
-  margin-top: 3rem;
-  margin-left: 3rem;
+
+  @apply flex flex-col order-1 gap-4
+  mt-12 ml-12
+  leading-4;
 }
 .title{
-  font-size: 2.5rem;
+  // font-size: 2.5rem;
+  @apply text-4xl;
 }
 .subtitle{
-  font-size: 1rem;
+  // font-size: 1rem;
+  @apply text-base;
 }
 </style>

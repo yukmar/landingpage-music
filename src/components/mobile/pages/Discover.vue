@@ -50,61 +50,43 @@
 </template>
 <style lang="scss" scoped>
 .mob-main{
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  
-  align-items: center;
-  justify-content: center;
+  @apply flex flex-col flex-grow
+    items-center justify-center;
 }
 
 div:first-child{
-  order: 2;
-  gap: 1rem;
   .title{
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-weight: 500;
+    @apply mb-8
+    text-5xl text-center font-medium;
   }
   ul{
-    list-style-type: none;
-    padding-left: 0;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-content: center;
-    gap: 1rem;
     li{
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      width: 5.5rem;
-      height: 5.5rem;
       background-color: $bgColor-2nd;
       svg{
-        width: 2.5rem;
+        @apply w-10;
       }
+      @apply flex flex-col
+      items-center justify-center
+      text-center
+      w-20r5 h-20r5;
     }
+    @apply flex flex-row
+    justify-center content-center
+    gap-4
+    list-none p-0
+    w-full;
   }
   p{
-    font-size: 1rem;
-    text-align: center;
-    @apply mx-5;
+    @apply mx-5 text-base text-center;
   }
-  @apply my-16;
+  @apply my-16 gap-4 order-2;
 }
 
 div:last-child{
-  order: 1;
   img{
-    width: 15rem;
-    height: 15rem;
+    @apply w-60 h-60;
   }
-  @apply my-10;
+  @apply my-10 order-1;
 }
 
 </style>
