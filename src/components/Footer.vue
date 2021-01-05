@@ -39,5 +39,6 @@
 <style lang="scss" scoped>
 footer{    
   background-color: $bgColor-2nd;
+  @apply text-base;
 }
 </style>
