@@ -36,36 +36,43 @@
 </template>
 <style lang="scss" scoped>
   .mob-navbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-around;
+    // width: 100%;
     &__nav{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: space-around;
       &-item{
-        text-decoration: none;
-        display: flex;
-        flex-direction: row;
-        gap: .5rem;
-        padding: .2rem;
+        // text-decoration: none;
+        // display: flex;
+        // flex-direction: row;
+        // gap: .5rem;
+        // padding: .2rem;
         svg{
-          width: 1.3rem;
+          // width: 1.3rem;
+          @apply w-5;
         }
         span{
-          font-size: 1rem;
+          // font-size: 1rem;
+          @apply text-base;
         }
+        @apply flex flex-row no-underline gap-2 p-1;
       }
+      @apply flex flex-col justify-around;
     }
     &__logo{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+      // display: flex;
+      // flex-direction: row;
+      // align-items: center;
+      @apply flex flex-row items-center;
     }
+    @apply flex flex-row justify-around w-full;
   }
   footer{
     background-color: $bgColor-2nd;
-    font-size: 1rem;
+    // font-size: 1rem;
+    @apply text-base;
   }
 </style>
