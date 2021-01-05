@@ -18,28 +18,33 @@
 </template>
 <style lang="scss" scoped>
   .mob-navbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-around;
+    // width: 100%;
     &__nav{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+      // display: flex;
+      // flex-direction: row;
+      // justify-content: center;
       &-item{
-        text-decoration: none;
-        padding: 1rem .5rem;
+        // text-decoration: none;
+        // padding: 1rem .5rem;
+        @apply py-4 px-2;
       }
+      @apply flex flex-row justify-center;
     }
     &__logo{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: .5rem;
+      // display: flex;
+      // flex-direction: row;
+      // align-items: center;
+      // gap: .5rem;
       img{
-        width: 2.5rem;
-        height: 2.5rem;
+        // width: 2.5rem;
+        // height: 2.5rem;
+        @apply w-10 h-10;
       }
+      @apply flex flex-row items-center gap-2;
     }
+    @apply flex flex-row justify-around w-full;
   }
 </style>
