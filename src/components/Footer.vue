@@ -37,8 +37,25 @@
   </footer>
 </template>
 <style lang="scss" scoped>
-footer{    
+.navbar{
+  @screen sm{
+    @apply w-full justify-center;
+  }
+  &__nav{
+    @apply w-full justify-around sm:justify-between sm:w-4/5;
+    &-left, &-right{
+      @apply flex flex-col justify-between;
+      @screen sm{
+        @apply flex-row;
+      }
+    }
+    &-item{
+      @apply flex flex-row gap-2;
+    }
+  }
+}
+footer{
   background-color: $bgColor-2nd;
-  @apply text-base;
+  @apply text-base w-full;
 }
 </style>

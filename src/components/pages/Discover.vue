@@ -1,5 +1,5 @@
 <template>
-  <Content :adjustLayout="cssAdjust">
+  <Content :layoutClass="styleClasses">
     <div title="left" class="headline">
       <h1 class="title">Discover new music</h1>
       <ul>
@@ -56,32 +56,66 @@
     },
     data(){
       return{
-        cssAdjust: {
-          fontSize: '2rem'
-        }
+        styleClasses: ['items-center', 'justify-center']
       }
     }
   }
 </script>
 <style lang="scss" scoped>
+// .mob-main{
+//   @apply flex flex-grow flex-col
+//     items-center justify-center;
+// }
+
 div:first-child{
+  @apply my-16 gap-4 order-2 self-center w-full;
+  @screen sm{
+    @apply order-1 flex-grow w-auto my-auto;
+  }
+  .title{
+    @apply mb-8
+    text-5xl text-center font-medium;
+  }
   ul{
+    @apply flex flex-row
+    justify-center content-center
+    gap-4
+    list-none p-0
+    w-full;
+    @screen sm{
+      @apply justify-start;
+    }
     li{
       background-color: $bgColor-2nd;
+
+      @apply flex flex-col
+      items-center justify-center
+      text-center
+      w-20r5 h-20r5;
       svg{
-        @apply w-12 h-12 my-2 self-center;
+        @apply w-10;
       }
-      @apply flex flex-col text-center px-6 py-2 mx-2;
     }
-    @apply flex flex-row list-none p-0;
   }
-  @apply w-full flex-grow;
+  p{
+    @apply mx-5 text-base text-center;
+    @screen sm{
+      @apply mx-0 text-left;
+    }
+  }
 }
 
 div:last-child{
-  img{
-    @apply w-4/5 h-4/5;
+  @apply my-10 order-1;
+  @screen sm{
+    @apply order-2 flex-grow my-auto flex justify-end;
   }
-  @apply self-center flex-grow flex flex-row justify-center w-full;
+  img{
+    @apply w-60 h-60;
+    @screen sm{
+      @apply w-4/5 h-4/5;
+    }
+  }
 }
+
 </style>
