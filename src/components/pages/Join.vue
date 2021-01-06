@@ -1,5 +1,5 @@
 <template>
-  <Content :adjustLayout="cssAdjust">
+  <Content :layoutClass="styleClass">
     <div title="left">
       <h1 class="title">Join the <span>fun.</span></h1>
     </div>
@@ -30,38 +30,54 @@
     },
     data(){
       return{
-        cssAdjust: {
-          marginTop: '5rem'
-        }
+        styleClass: ['items-center', 'justify-center']
       }
     }
   }
 </script>
 <style lang="scss" scoped>
-div{
-  @apply self-center;
-}
+
 .title{
+  @apply mb-2 sm:font-bold sm:text-6xl;
   span{
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     color: $fun-wordColor;
+
+    @apply font-bold sm:text-8xl;
   }
-  @apply font-bold;
 }
 div:last-child{
   background-color: $bgColor-2nd;
-  @apply py-4 px-2;
+  @apply m-2 p-4 rounded-xl;
+  @screen sm{
+    min-height: 55vh;
+    width: 40vw;
+    @apply flex flex-col items-center justify-center;
+  }
 }
 .form{
+  @apply flex flex-col
+  gap-4;
+  @screen sm{
+    width: 70%;
+    @apply content-center gap-8 py-8;
+  }
   &__item{
-      // width: 85vw;
-      @apply flex flex-col gap-2;
+    @screen sm{
+      @apply flex flex-col gap-4;
     }
-    @apply flex flex-col content-center gap-4 px-4 sm:px-14 py-8;
+    label{
+      @apply sm:font-bold;
+    }
   }
-  input[type='text']{
-    all: unset;
-    border-color: $input-borderColor;
-    @apply border border-solid px-6 py-4;
+}
+input[type='text']{
+  all: unset;
+  border-color: $input-borderColor;
+
+  @apply p-2 border border-solid rounded;
+  @screen sm{
+    @apply border-2 px-4 py-2;
   }
+}
 </style>

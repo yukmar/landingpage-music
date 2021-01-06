@@ -13,6 +13,9 @@ module.exports = {
       },
       height: {
         '20r5': '5.5rem'
+      },
+      screens: {
+        'mdh': {'raw': '(max-height: 768px)'}
       }
     },
   },
