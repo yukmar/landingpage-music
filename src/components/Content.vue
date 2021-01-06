@@ -1,21 +1,32 @@
 <template>
-  <div class="main" :style="adjustLayout">
+  <div :style="layoutCss" :class="baseStyle()">
     <slot></slot>
   </div>
   <div id="circle-1"></div>
   <div id="circle-2"></div>
   <div id="circle-3"></div>
+
 </template>
 <script>
   export default{
     props: {
-      adjustLayout: Object
+      layoutCss: Object,
+      layoutClass: Array
+    },
+    methods: {
+      baseStyle(){
+        let styleList = ['base-content']
+        if (this.layoutClass) {
+          styleList.push(...this.layoutClass);
+        }
+        return styleList;
+      }
     }
   }
 </script>
 <style lang="scss" scoped>
-  .main{
-    @apply flex flex-grow;
+  .base-content{
+    @apply flex flex-col flex-grow;
     @screen sm{
       @apply flex-row
       justify-around 
