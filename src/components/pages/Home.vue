@@ -1,5 +1,5 @@
 <template>
-  <Content>
+  <Content :layoutClass="styleClasses">
     <div title="left">
       <img src="../../assets/images/landing-page-girl.png">
     </div>
@@ -15,14 +15,33 @@
   export default{
     components: {
       Content
+    },
+    data(){
+      return{
+        styleClasses: ['justify-between', 'h-full']
+      }
     }
   }
 </script>
 <style lang="scss" scoped>
+
 div:first-child{
-  img{
-    height: 80vh;
+  @apply flex flex-row justify-center
+  order-2 w-full;
+  @screen sm{
+    @apply flex-grow order-1 self-end w-auto flex-grow;
   }
-  @apply self-end flex-grow;
+  img{
+    @apply w-2/3;
+    @screen sm{
+      height: 75vh;
+      @apply w-auto;
+    }
+  }
 }
+div:last-child{
+  @apply mt-14 mx-14 text-center sm:mt-0 sm:mx-0
+  leading-8 pr-0;
+}
+
 </style>
