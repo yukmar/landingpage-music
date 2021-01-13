@@ -1,6 +1,10 @@
 <template>
   <Header />
-  <router-view></router-view>
+  <transition name="fade" mode="out-in">
+    <div>
+      <router-view></router-view>
+    </div>
+  </transition>
   <Footer v-if="checkPathHome" />
 </template>
 
@@ -21,3 +25,12 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+  transform: translateX(2rem);
+}
+.fade-enter-active, .fade-leave-active{
+  transition: transform .3s ease;
+}
+</style>

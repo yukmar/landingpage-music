@@ -3,8 +3,6 @@ import Home from './components/pages/Home.vue'
 import Discover from './components/pages/Discover.vue'
 import Join from './components/pages/Join.vue'
 
-import Test from './components/pages/Test.vue'
-
 const routes = [
   {
     path: '',
